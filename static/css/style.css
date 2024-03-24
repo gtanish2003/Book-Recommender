@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+/* CSS for the navigation bar */
+.nav-bar {
+    background-color: #333; /* Background color */
+    padding: 10px; /* Padding around the links */
+  }
+  
+  /* CSS for the list items */
+  .nav-bar ul {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* CSS for the list item links */
+  .nav-bar ul li {
+    display: inline-block; /* Display items horizontally */
+    margin-right: 20px; /* Add space between items */
+  }
+  
+  .nav-bar ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+  }
+  
+  .nav-bar ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .nav-bar ul li a:hover {
+    color: #ff5733; /* Change color on hover */
+  }
+
+
+  main>h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #ff5733;
+  }
+  
+/* CSS for the card container */
+.card-container {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(5, 1fr); /* 5 columns with equal width */
+  gap: 20px; /* Gap between cards */
+  padding: 20px; /* Add padding inside the container */
+}
+
+/* CSS for the card */
+.card {
+  width: 100%; /* Set the width of each card to fill the column */
+  padding: 10px; /* Add padding inside the card */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Move the card up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+/* CSS for the card image */
+.card img {
+  width: 100%; /* Make the image fill the card width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add rounded corners to the image */
+}
+
+/* CSS for the text content */
+.card p {
+  margin: 5px 0; /* Add spacing between paragraphs */
+}
+
+/* CSS for the book author */
+.card p.author {
+  font-weight: bold; /* Make the author name bold */
+}
+
+/* CSS for the votes and ratings */
+.card p.votes, .card p.ratings {
+  color: #888; /* Dim the color for votes and ratings */
+  font-size: 14px; /* Reduce the font size for votes and ratings */
+}

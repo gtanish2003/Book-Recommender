@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h1>Recommend Books</h1>
+                <form action="/recommend_books" method="post">
+                    <input type="text" name="user_input">
+                    <input type="submit" name="" id="">
+                </form>
+            </div>
+            
+            {% if data %}
+            {% for i in  data %}
+
+            <div class="avs">
+                <div class="card">
+                    <div class="card_body">
+                        <img src="{{i[2]}}" alt="">
+                        <p>{{i[0]}}</p>
+                        <h4>{{i[1]}}</h4>	
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+            {% endif %}	
+        </div>
+    </div>
+</body>
+</html>submit -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Popular</a></li>
+            <li><a href="recommend.html">Recommendations</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <h1>Recommendations</h1>
+
+        <form action="/recommend_books" method="post">
+            <input type="text" name="user_input" placeholder="Search for books">
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="card-container">
+            {% if data %}
+            {% for i in data  %}
+            <div class="card">
+                <img src="{{ i[2] }}" alt="Book Image">
+                <p>{{ i[0] }}</p>
+                <p>{{ i[1] }}</p>
+
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No recommendations yet. Please search for books.</p>
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>

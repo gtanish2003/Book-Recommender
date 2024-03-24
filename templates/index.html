@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('index') }}">Popular</a></li>
+        <li><a href="{{ url_for('recommend_ui') }}">Recommendations</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <h1>Popular</h1>
+
+      <div class="card-container">
+        {% for i in range(book_name|length) %}
+        <div class="card">
+          <img src="{{ image[i] }}" alt="Book Image" />
+          <p>{{ author[i] }}</p>
+          <p>Votes - {{ votes[i] }}</p>
+          <p>Ratings - {{ ratings[i] }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </main>
+  </body>
+</html>
