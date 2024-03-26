@@ -26,7 +26,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.nav-bar {
+/* .nav-bar {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
@@ -45,8 +45,46 @@ body {
 .nav-bar ul li a {
     color: #fff;
     text-decoration: none;
-}
+} */
 
+
+
+/* CSS for the navigation bar */
+.nav-bar {
+    background-color: #333; /* Background color */
+    padding: 10px; /* Padding around the links */
+  }
+  
+  /* CSS for the list items */
+  .nav-bar ul {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* CSS for the list item links */
+  .nav-bar ul li {
+    display: inline-block; /* Display items horizontally */
+    margin-right: 20px; /* Add space between items */
+  }
+  
+  .nav-bar ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+  }
+  
+  .nav-bar ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .nav-bar ul li a:hover {
+    color: #ff5733; /* Change color on hover */
+  }
+
+  
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
